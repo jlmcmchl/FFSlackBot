@@ -1,5 +1,5 @@
 var slack = require('@slack/client');
-var tba = require('thebluealliance')("jlmcmchl", "TBCSlackClient", "alpha");
+var tba = require('thebluealliance')('jlmcmchl', 'TBCSlackClient', 'alpha');
 
 const token = process.env.SLACK_API_TOKEN || '';
 
@@ -25,11 +25,11 @@ var rtm = new slack.RtmClient(
 
 rtm.on(slack.CLIENT_EVENTS.RTM.AUTHENTICATED, function (rtmStartData)
   {
-    console.log(`Logged in as ${rtmStartData.self.name} of team ${rtmStartData.team.name}, but not yet connected to a channel`);
+    console.log('Logged in as ${rtmStartData.self.name} of team ${rtmStartData.team.name}, but not yet connected to a channel');
   });
 
 rtm.on(slack.CLIENT_EVENTS.RTM.RTM_CONNECTION_OPENED, function (info) {
-  rtm.sendMessage(`I'm Alive!`, rtm.dataStore.getDMByName(`jlmcmchl`).id, stdAck);
+  rtm.sendMessage('I\'m Alive!', rtm.dataStore.getDMByName('jlmcmchl').id, stdAck);
 });
 
 rtm.on(slack.RTM_EVENTS.MESSAGE, function (msg)
@@ -37,7 +37,7 @@ rtm.on(slack.RTM_EVENTS.MESSAGE, function (msg)
   console.log(msg);
   if (msg.text == 'Jeeves')
   {
-    rtm.sendMessage(`Fuck off buddy`, rtm.dataStore.getDMByName(`jlmcmchl`).id, stdAck);
+    rtm.sendMessage('Fuck off buddy', rtm.dataStore.getDMByName('jlmcmchl').id, stdAck);
   }
 });
 

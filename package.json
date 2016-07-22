@@ -1,0 +1,28 @@
+{
+  "name": "@BreakfastCompany/Waiter",
+  "version": "0.1.0",
+  "description": "The Breakfast Company's FantasyFIRST Slack Bot",
+  "bugs":
+  {
+    "url": "https://github.com/jlmcmchl/FFSlackBot/issues"
+  },
+  "license": { "license": "MIT"},
+  "private": "true",
+  "author": "Jordan McMichael <mcmi8190@kettering.edu>",
+  "contributors":
+  [
+    "Joseph Cupchack",
+    "Brennan Bibic"
+  ],
+  "bin": "main.js",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/jlmcmchl/FFSlackBot.git"
+  },
+  "dependencies":
+  {
+    "@slack/client": "^3.5.1",
+    "thebluealliance": "^1.1.2"
+  }
+}

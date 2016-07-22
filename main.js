@@ -3,6 +3,11 @@ var tba = require('thebluealliance')('jlmcmchl', 'TBCSlackClient', 'alpha');
 
 const token = process.env.SLACK_API_TOKEN || '';
 
+if (token == '')
+{
+  process.exit();
+}
+
 var stdAck = function(err, msg)
 {
   if (err != null)
